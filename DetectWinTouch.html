@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Detect User Agent</title>
     <script language="javascript" type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+      var userAgent = navigator.userAgent;
+      $('#useragent').html(userAgent);      
+    </script>
   </head>
   <body>
     <h2>User Agent</h2>
