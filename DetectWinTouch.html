@@ -6,8 +6,10 @@
     <title>Detect User Agent</title>
     <script language="javascript" type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
-      var userAgent = navigator.userAgent;
-      $('#useragent').html(userAgent);      
+      $(document).ready(function (){
+        var userAgent = navigator.userAgent;
+        $('#useragent').html(userAgent);  
+      }); 
     </script>
   </head>
   <body>
