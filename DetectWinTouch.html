@@ -8,14 +8,17 @@
     <script>
       $(document).ready(function (){
         var userAgent = navigator.userAgent;
-        $('#useragent').html(userAgent);  
+        $('#useragent').html(userAgent);
+        if (window.navigator.userAgent.indexOf("Windows") != -1)
+            $('#useragent').html("I'm Windows");
+        
       }); 
     </script>
   </head>
   <body>
     <h2>User Agent</h2>
     <div id='useragent'></div>
-    <h2>History</h2>
-    <div id='history'>Populating...</div>
+    <h2>IS Winodws?</h2>
+    <div id='history'></div>
   </body>
 </html>
