@@ -9,9 +9,15 @@
       $(document).ready(function (){
         var userAgent = navigator.userAgent;
         $('#useragent').html(userAgent);
-        if (window.navigator.userAgent.indexOf("Windows") != -1)
-            $('#history').html("I'm Windows");
-        
+
+        var bWindows = (/windows/.test(navigator.userAgent.toLowerCase()))
+          && !(/mobile/.test(navigator.userAgent.toLowerCase()));
+
+        if (bWindows)
+            $('#history').html("I'm Windows Touch Device");
+        if (/mobile/.test(navigator.userAgent.toLowerCase()))
+            $('#history').html("I'm Windows Phone");
+          
       }); 
     </script>
   </head>
